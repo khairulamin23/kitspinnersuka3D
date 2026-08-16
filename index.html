@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Kit SpinnerSuKa AR</title>
+  <title>Kit SpinnerSuKa 3D</title>
 
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
@@ -16,16 +16,17 @@
     }
 
     #info {
-      position: absolute;
+      position: fixed;
       top: 10px;
       left: 10px;
       right: 10px;
-      z-index: 9999;
-      background: rgba(255,255,255,0.9);
+      z-index: 999;
+      background: rgba(255,255,255,0.85);
       padding: 10px;
       text-align: center;
+      border-radius: 10px;
       font-family: Arial, sans-serif;
-      border-radius: 8px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -33,7 +34,7 @@
 <body>
 
 <div id="info">
-  Halakan kamera pada gambar mulut Kit SpinnerSuKa
+  Kit SpinnerSuKa 3D — Halakan kamera pada gambar mulut
 </div>
 
 <a-scene
@@ -43,42 +44,68 @@
   vr-mode-ui="enabled: false"
   device-orientation-permission-ui="enabled: false">
 
-<a-assets>
-  <a-asset-item
-    id="mulut3d"
-    src="./kit spinnersuka 1 final.glb">
-  </a-asset-item>
+  <a-assets>
+    <a-asset-item id="mulut3" src="./mulut 3a.glb"></a-asset-item>
+    <a-asset-item id="mulut4" src="./mulut 4a.glb"></a-asset-item>
+    <a-asset-item id="mulut5" src="./mulut 5a.glb"></a-asset-item>
+    <a-asset-item id="mulut6" src="./mulut 6a.glb"></a-asset-item>
+    <a-asset-item id="mulut7" src="./mulut 7a.glb"></a-asset-item>
+  </a-assets>
 
-  <a-asset-item
-    id="mulut3d2"
-    src="./MODEL 2.glb">
-  </a-asset-item>
-</a-assets>
+  <!-- TARGET 0 -->
+  <a-entity mindar-image-target="targetIndex: 0">
+    <a-gltf-model
+      src="#mulut3"
+      position="0 0 0"
+      rotation="0 0 0"
+      scale="0.5 0.5 0.5">
+    </a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 1 -->
+  <a-entity mindar-image-target="targetIndex: 1">
+    <a-gltf-model
+      src="#mulut4"
+      position="0 0 0"
+      rotation="0 0 0"
+      scale="0.5 0.5 0.5">
+    </a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 2 -->
+  <a-entity mindar-image-target="targetIndex: 2">
+    <a-gltf-model
+      src="#mulut5"
+      position="0 0 0"
+      rotation="0 0 0"
+      scale="0.5 0.5 0.5">
+    </a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 3 -->
+  <a-entity mindar-image-target="targetIndex: 3">
+    <a-gltf-model
+      src="#mulut6"
+      position="0 0 0"
+      rotation="0 0 0"
+      scale="0.5 0.5 0.5">
+    </a-gltf-model>
+  </a-entity>
+
+  <!-- TARGET 4 -->
+  <a-entity mindar-image-target="targetIndex: 4">
+    <a-gltf-model
+      src="#mulut7"
+      position="0 0 0"
+      rotation="0 0 0"
+      scale="0.5 0.5 0.5">
+    </a-gltf-model>
+  </a-entity>
+
   <a-camera
     position="0 0 0"
     look-controls="enabled: false">
   </a-camera>
-
-  <a-entity mindar-image-target="targetIndex: 0">
-
-    <a-gltf-model
-      src="#mulut3d"
-      position="0 0 0.1"
-rotation="0 360 0"
-      scale="0.5 0.5 0.5">
-    </a-gltf-model>
-
-  </a-entity>
-  <a-entity mindar-image-target="targetIndex: 1">
-
-  <a-gltf-model
-    src="#mulut3d2"
-    position="0 0 0.1"
-    rotation="0 360 0"
-    scale="0.5 0.5 0.5">
-  </a-gltf-model>
-
-</a-entity>
 
 </a-scene>
 
